@@ -1,5 +1,7 @@
 # 🚀 NGINX on AWS EC2 with a Custom Domain
 
+## 1. Project Overview
+
 For this project, I set up a web server using an AWS EC2 instance and NGINX.
 
 I also configured a custom domain — **mustafawebsite.co.uk** (purchased for 2 years at £8.03) — using Cloudflare DNS, and created an A record pointing my domain to the public IPv4 address of my EC2 instance.
@@ -10,32 +12,52 @@ The purpose of this project was to understand how DNS, IP addresses, ports, secu
 
 The final setup looks like this:
 
-``` ┌────────────┐
- │  Internet  │
- └─────┬──────┘
-       │  visits mustafawebsite.co.uk
-       ▼
- ┌───────────────────────────┐
- │   Cloudflare DNS           │
- │   A record → 13.42.76.65   │
- └─────────────┬──────────────┘
-               │  resolves to
-               ▼
- ┌───────────────────────────┐
- │   AWS EC2 Instance         │
- │   Public IP: 13.42.76.65   │
- │   Security Group: 80/443   │
- └─────────────┬──────────────┘
-               │  HTTP :80
-               ▼
- ┌───────────────────────────┐
- │        NGINX               │
- └─────────────┬──────────────┘
-               │
-               ▼
- ┌───────────────────────────┐
- │   Custom Landing Page      │
- └───────────────────────────┘
+```
+      ┌─────────────────────────┐
+      │        Internet          │
+      └────────────┬─────────────┘
+                    │  visits mustafawebsite.co.uk
+                    ▼
+      ┌─────────────────────────┐
+      │      Cloudflare DNS      │
+      │  A record → 13.42.76.65  │
+      └────────────┬─────────────┘
+                    │  resolves to
+                    ▼
+      ┌─────────────────────────┐
+      │    AWS EC2 Instance      │
+      │  Public IP: 13.42.76.65  │
+      │  Security Group: 80/443  │
+      └────────────┬─────────────┘
+                    │  HTTP :80
+                    ▼
+      ┌─────────────────────────┐
+      │          NGINX           │
+      └────────────┬─────────────┘
+                    │
+                    ▼
+      ┌─────────────────────────┐
+      │    Custom Landing Page   │
+      └─────────────────────────┘
+```
+
+The main components I used were:
+
+- AWS EC2
+- Amazon Linux 2023
+- NGINX
+- Cloudflare (domain registration + DNS)
+- DNS A record
+- AWS Security Groups
+- SSH
+- HTTP
+
+---
+
+## 📖 Full Walkthrough
+
+The steps below cover exactly how I got from nothing to a live, custom-domain web server.
+
 ---
 
 ## 🌐 Step 1 — Buy a Domain on Cloudflare
@@ -48,7 +70,7 @@ The final setup looks like this:
 
 ---
 
-## Step 2 — Launch an EC2 Instance
+## 🖥 Step 2 — Launch an EC2 Instance
 
 Opened the **AWS EC2 console** → searched "EC2" in the AWS search bar → **Launch Instance**.
 
@@ -90,7 +112,6 @@ ssh -i ~/.ssh/nginx-ec2-key.pem ec2-user@13.42.76.65
 ```
 
 ---
-
 ## Step 4 — Install & Start NGINX on EC2
 
 Ran the following once connected:
