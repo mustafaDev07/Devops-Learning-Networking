@@ -16,7 +16,7 @@ By the end, the site is live at my own domain, powered by AWS EC2 and NGINX.
 
 ---
 
-## 🖥 Step 2 — Launch an EC2 Instance
+## Step 2 — Launch an EC2 Instance
 
 Opened the **AWS EC2 console** → searched "EC2" in the AWS search bar → **Launch Instance**.
 
@@ -59,7 +59,7 @@ ssh -i ~/.ssh/nginx-ec2-key.pem ec2-user@13.42.76.65
 
 ---
 
-## ⚙️ Step 4 — Install & Start NGINX on EC2
+## Step 4 — Install & Start NGINX on EC2
 
 Ran the following once connected:
 
@@ -93,7 +93,7 @@ sudo systemctl status nginx   # confirmed "active (running)"
 
 ---
 
-## ✅ Step 6 — Confirm DNS Is Live
+## Step 6 — Confirm DNS Is Live
 
 From my local machine:
 
@@ -109,13 +109,14 @@ Visited `http://mustafawebsite.co.uk` in the browser — the NGINX welcome page 
 
 ---
 
-## 🏁 Milestone Reached
+##  Milestone Reached
 
 NGINX is live on EC2 and successfully mapped to my custom domain.
+<img width="3439" height="1382" alt="image" src="https://github.com/user-attachments/assets/d87ae0bc-c5f0-422b-960e-78334c30e03a" />
 
 ---
 
-## 🛠 Extra — Replaced the Default Page with a Custom One
+##  Extra — Replaced the Default Page with a Custom One
 
 **Goal:** swap NGINX's default landing page for a personal one.
 
