@@ -1,9 +1,41 @@
 # 🚀 NGINX on AWS EC2 with a Custom Domain
 
-A step-by-step record of how I launched an NGINX web server on Amazon EC2 and mapped it to a custom domain purchased through Cloudflare — part of my hands-on Networking & DevOps learning journey.
+For this project, I set up a web server using an AWS EC2 instance and NGINX.
 
-By the end, the site is live at my own domain, powered by AWS EC2 and NGINX.
+I also configured a custom domain — **mustafawebsite.co.uk** (purchased for 2 years at £8.03) — using Cloudflare DNS, and created an A record pointing my domain to the public IPv4 address of my EC2 instance.
 
+The purpose of this project was to understand how DNS, IP addresses, ports, security groups, EC2, and web servers all work together — connecting the networking fundamentals I've been learning to a real, live deployment.
+
+## 2. What I Built
+
+The final setup looks like this:
+
+``` ┌────────────┐
+ │  Internet  │
+ └─────┬──────┘
+       │  visits mustafawebsite.co.uk
+       ▼
+ ┌───────────────────────────┐
+ │   Cloudflare DNS           │
+ │   A record → 13.42.76.65   │
+ └─────────────┬──────────────┘
+               │  resolves to
+               ▼
+ ┌───────────────────────────┐
+ │   AWS EC2 Instance         │
+ │   Public IP: 13.42.76.65   │
+ │   Security Group: 80/443   │
+ └─────────────┬──────────────┘
+               │  HTTP :80
+               ▼
+ ┌───────────────────────────┐
+ │        NGINX               │
+ └─────────────┬──────────────┘
+               │
+               ▼
+ ┌───────────────────────────┐
+ │   Custom Landing Page      │
+ └───────────────────────────┘
 ---
 
 ## 🌐 Step 1 — Buy a Domain on Cloudflare
