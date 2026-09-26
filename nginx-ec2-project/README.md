@@ -143,4 +143,4 @@ Visiting my domain now shows a custom landing page introducing myself and the te
 
 ---
 
-*Part of my ongoing DevOps & Networking learning journey — see the main [devops-learning](../) repo for related notes and labs.*
+
