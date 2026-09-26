@@ -16,7 +16,7 @@ This repo grows from core concepts up to the networking patterns you actually ru
 
 ---
 
-## 📚 Topics Covered
+## Topics Covered
 
 | Category | Topics |
 |---|---|
@@ -29,7 +29,7 @@ This repo grows from core concepts up to the networking patterns you actually ru
 
 ---
 
-## 🧭 The OSI Model — A Practical View for DevOps
+## The OSI Model — A Practical View for DevOps
 
 The OSI (Open Systems Interconnection) model often gets dismissed as "textbook theory," but in practice it's one of the most useful mental models for **diagnosing outages, designing resilient systems, and reasoning about where data is actually breaking down**.
 
@@ -63,25 +63,25 @@ flowchart TD
 
 ## 🔍 Layer-by-Layer Breakdown
 
-### 🔴 Layer 1 — Physical
+### Layer 1 — Physical
 The raw hardware layer: cables, switches, routers, NICs, and — in cloud environments — the underlying VM or bare-metal host. If power is out or a link is down, everything above it fails too. Always the first thing to rule out.
 
-### 🟠 Layer 2 — Data Link
+### Layer 2 — Data Link
 Governs communication between devices sharing the same local network segment. This is where MAC addresses, Ethernet framing, and switch behavior (VLANs, ARP tables) live.
 
-### 🟢 Layer 3 — Network
+### Layer 3 — Network
 Handles moving packets *between* different networks. IP addressing, subnetting, routing tables, and network-level firewalls all operate here — this is the layer most cloud VPC/subnet design decisions map to.
 
-### 🔵 Layer 4 — Transport
+### Layer 4 — Transport
 Decides *how* data gets delivered: reliably and ordered via **TCP**, or fast and best-effort via **UDP**. Ports, sessions, and connection integrity are managed here — critical for understanding load balancers and connection timeouts.
 
-### 🟣 Layer 5 — Session
+### Layer 5 — Session
 Manages the lifecycle of a connection: opening it, keeping it alive, and closing it cleanly. Less visible day-to-day, but relevant when debugging dropped or hanging connections.
 
-### 🟪 Layer 6 — Presentation
+### Layer 6 — Presentation
 Translates data into a form applications can use. This includes TLS/SSL encryption, character encoding, and compression — the layer most often responsible for "certificate" and "handshake" errors.
 
-### ⚪ Layer 7 — Application
+### Layer 7 — Application
 The layer end users and developers interact with directly: web apps, REST/GraphQL APIs, email, DNS lookups from an app's perspective. Most bug reports ("the app isn't working") start here, even when the real cause is buried several layers down.
 
 ---
