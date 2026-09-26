@@ -1,4 +1,4 @@
-# 🚀 NGINX on AWS EC2 with a Custom Domain
+# NGINX on AWS EC2 with a Custom Domain
 
 ## 1. Project Overview
 
@@ -54,13 +54,13 @@ The main components I used were:
 
 ---
 
-## 📖 Full Walkthrough
+## Full Walkthrough
 
 The steps below cover exactly how I got from nothing to a live, custom-domain web server.
 
 ---
 
-## 🌐 Step 1 — Buy a Domain on Cloudflare
+## Step 1 — Buy a Domain on Cloudflare
 
 1. Went to the [Cloudflare Registrar](https://www.cloudflare.com/products/registrar/)
 2. Searched for a domain and purchased **mustafawebsite.co.uk** for **2 years at £8.03**
@@ -70,7 +70,7 @@ The steps below cover exactly how I got from nothing to a live, custom-domain we
 
 ---
 
-## 🖥 Step 2 — Launch an EC2 Instance
+## Step 2 — Launch an EC2 Instance
 
 Opened the **AWS EC2 console** → searched "EC2" in the AWS search bar → **Launch Instance**.
 
