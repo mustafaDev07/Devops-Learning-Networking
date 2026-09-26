@@ -89,6 +89,7 @@ sudo systemctl status nginx   # confirmed "active (running)"
 | Proxy status | DNS only (grey cloud) — for initial testing |
 
 3. Saved the record.
+<img width="1777" height="721" alt="image" src="https://github.com/user-attachments/assets/4a62d664-f611-4ecc-a701-f6262b4382a0" />
 
 ---
 
