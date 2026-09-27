@@ -66,7 +66,7 @@ The steps below cover exactly how I got from nothing to a live, custom-domain we
 2. Searched for a domain and purchased **mustafawebsite.co.uk** for **2 years at £8.03**
 3. Cloudflare automatically manages DNS for the domain once purchased — no extra setup needed at this stage
 
-
+<img width="1777" height="721" alt="image" src="https://github.com/user-attachments/assets/4a62d664-f611-4ecc-a701-f6262b4382a0" />
 
 ---
 
@@ -142,7 +142,7 @@ sudo systemctl status nginx   # confirmed "active (running)"
 | Proxy status | DNS only (grey cloud) — for initial testing |
 
 3. Saved the record.
-<img width="1777" height="721" alt="image" src="https://github.com/user-attachments/assets/4a62d664-f611-4ecc-a701-f6262b4382a0" />
+
 
 ---
 
