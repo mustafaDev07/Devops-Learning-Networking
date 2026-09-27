@@ -166,6 +166,7 @@ Visited `http://mustafawebsite.co.uk` in the browser the NGINX welcome page load
 ##  What I Accomplished
 
 NGINX is live on EC2 and successfully mapped to my custom domain.
+IP address change when i stopped the EC2 instance and run it again.
 <img width="1713" height="878" alt="image" src="https://github.com/user-attachments/assets/cc57eb18-a946-49a3-8007-1ef1def8edbc" />
 
 
