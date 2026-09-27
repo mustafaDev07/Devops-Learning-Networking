@@ -130,6 +130,10 @@ sudo systemctl status nginx   # confirmed "active (running)"
 
 **Test:** opened `http://13.42.76.65` in a browser — the default NGINX welcome page loaded successfully.
 
+<img width="1181" height="521" alt="image" src="https://github.com/user-attachments/assets/0af2e66b-70b4-411d-9960-9db9c51e031d" />
+
+
+
 ---
 
 ## Step 5 — Point the Domain to the EC2 IP (Cloudflare)
