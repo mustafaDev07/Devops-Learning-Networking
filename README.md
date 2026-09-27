@@ -29,9 +29,9 @@ This repo grows from core concepts up to the networking patterns you actually ru
 
 ---
 
-## The OSI Model — A Practical View for DevOps
+## The OSI Model 
 
-The OSI (Open Systems Interconnection) model often gets dismissed as "textbook theory," but in practice it's one of the most useful mental models for **diagnosing outages, designing resilient systems, and reasoning about where data is actually breaking down**.
+The OSI model often gets dismissed as "textbook theory," but in practice it's one of the most useful mental models for **diagnosing outages, designing resilient systems, and reasoning about where data is actually breaking down**.
 
 Every request your users make — a page load, an API call, a database query — travels down through these layers on one end and back up on the other. When something breaks, knowing *which* layer to look at saves hours of guessing.
 
