@@ -52,13 +52,8 @@ The main components I used were:
 - SSH
 - HTTP
 
----
 
-## Full Walkthrough
 
-The steps below cover exactly how I got from nothing to a live, custom-domain web server.
-
----
 
 ## Step 1 — Buy a Domain on Cloudflare
 
@@ -68,7 +63,7 @@ The steps below cover exactly how I got from nothing to a live, custom-domain we
 
 <img width="1777" height="721" alt="image" src="https://github.com/user-attachments/assets/4a62d664-f611-4ecc-a701-f6262b4382a0" />
 
----
+
 
 ## Step 2 — Launch an EC2 Instance
 
@@ -152,7 +147,6 @@ sudo systemctl status nginx   # confirmed "active (running)"
 3. Saved the record.
 
 
----
 
 ## Step 6 — Confirm DNS Is Live
 
@@ -168,16 +162,16 @@ Both returned the EC2 public IP as expected.
 
 Visited `http://mustafawebsite.co.uk` in the browser — the NGINX welcome page loaded correctly, confirming the domain was correctly routed to the instance.
 
----
+
 
 ##  What I Accomplished
 
 NGINX is live on EC2 and successfully mapped to my custom domain.
 <img width="3439" height="1382" alt="image" src="https://github.com/user-attachments/assets/d87ae0bc-c5f0-422b-960e-78334c30e03a" />
 
----
 
-##  Extra — Replaced the Default Page with a Custom One
+
+##  Replaced the Default Page with a Custom One
 
 **Goal:** swap NGINX's default landing page for a personal one.
 
@@ -197,7 +191,7 @@ Visiting my domain now shows a custom landing page introducing myself and the te
 
 ---
 
-## Stack Used
+## What I Used
 
 - **AWS EC2** — Amazon Linux 2023, t3.micro
 - **NGINX** — web server
