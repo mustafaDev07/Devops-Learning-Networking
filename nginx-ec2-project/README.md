@@ -4,7 +4,7 @@
 
 For this project, I set up a web server using an AWS EC2 instance and NGINX.
 
-I also configured a custom domain — mustafawebsite.co.uk (purchased for 2 years at £8.03) using Cloudflare DNS, and created an A record pointing my domain to the public IPv4 address of my EC2 instance.
+I also configured a custom domain on my website mustafawebsite.co.uk (purchased for 2 years at £8.03) using Cloudflare DNS, and created an A record pointing my domain to the public IPv4 address of my EC2 instance.
 
 The purpose of this project was to understand how DNS, IP addresses, ports, security groups, EC2, and web servers all work together . Connecting the networking fundamentals I've been learning to a real, live deployment.
 
