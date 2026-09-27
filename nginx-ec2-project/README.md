@@ -66,7 +66,7 @@ The steps below cover exactly how I got from nothing to a live, custom-domain we
 2. Searched for a domain and purchased **mustafawebsite.co.uk** for **2 years at £8.03**
 3. Cloudflare automatically manages DNS for the domain once purchased — no extra setup needed at this stage
 
-> ✅ AWS Route 53 works just as well if you'd rather stay entirely inside AWS.
+
 
 ---
 
@@ -95,7 +95,7 @@ Then went to the instance → **Instance Summary** → copied the **Public IPv4 
 
 ---
 
-## 🔑 Step 3 — Connect to the EC2 Instance via SSH
+## Step 3 — Connect to the EC2 Instance via SSH
 
 Since I was working from **WSL**, the `.pem` file downloaded to my Windows filesystem first, so I had to move it into Linux before use:
 
@@ -128,7 +128,7 @@ sudo systemctl status nginx   # confirmed "active (running)"
 
 ---
 
-## 🌍 Step 5 — Point the Domain to the EC2 IP (Cloudflare)
+## Step 5 — Point the Domain to the EC2 IP (Cloudflare)
 
 1. Cloudflare dashboard → my domain → **DNS** → **Add record**
 2. Configured:
