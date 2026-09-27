@@ -35,18 +35,23 @@ The OSI (Open Systems Interconnection) model often gets dismissed as "textbook t
 
 Every request your users make — a page load, an API call, a database query — travels down through these layers on one end and back up on the other. When something breaks, knowing *which* layer to look at saves hours of guessing.
 
-```
-flowchart
-    L7[Layer 7 - Application]
-    L6[Layer 6 - Presentation]
-    L5[Layer 5 - Session]
-    L4[Layer 4 - Transport]
-    L3[Layer 3 - Network]
-    L2[Layer 2 - Data Link]
-    L1[Layer 1 - Physical]
+```mermaid
+flowchart TD
+    L7["Layer 7 - Application"]
+    L6["Layer 6 - Presentation"]
+    L5["Layer 5 - Session"]
+    L4["Layer 4 - Transport"]
+    L3["Layer 3 - Network"]
+    L2["Layer 2 - Data Link"]
+    L1["Layer 1 - Physical"]
 
-    L7 --> L6 --> L5 --> L4 --> L3 --> L2 --> L1
-    L1 -.-> L7
+    L7 --> L6
+    L6 --> L5
+    L5 --> L4
+    L4 --> L3
+    L3 --> L2
+    L2 --> L1
+    L1 -.->|encapsulation cycle| L7
 ```
 
 > **Troubleshooting tip:** Work from the bottom up. A dead cable or downed VM (Layer 1) will masquerade as a broken app (Layer 7) if you don't rule out the lower layers first.
