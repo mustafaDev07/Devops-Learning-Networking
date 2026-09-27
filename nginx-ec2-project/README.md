@@ -193,7 +193,7 @@ Visiting my domain now shows a custom landing page introducing myself and the te
 
 ---
 
-## 📦 Stack Used
+## Stack Used
 
 - **AWS EC2** — Amazon Linux 2023, t3.micro
 - **NGINX** — web server
