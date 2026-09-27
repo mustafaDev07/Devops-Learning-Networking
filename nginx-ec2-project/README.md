@@ -94,8 +94,6 @@ Opened the **AWS EC2 console** → searched "EC2" in the AWS search bar → **La
 
 Clicked **Launch Instance** and waited for the state to show **Running**.
 
-<img width="1312" height="853" alt="image" src="https://github.com/user-attachments/assets/4ed42d7f-2c65-494c-b346-5144467ca98c" />
-
 
 Then went to the instance → **Instance Summary** → copied the **Public IPv4 address** for later use.
 
