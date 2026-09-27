@@ -1,4 +1,4 @@
-# 🌐 DevOps Learning — Networking
+# DevOps Learning — Networking
 
 A personal knowledge base of notes, labs, and practice scripts documenting my journey through networking fundamentals — built specifically through a DevOps and Cloud lens.
 
@@ -37,37 +37,45 @@ Every request your users make — a page load, an API call, a database query —
 
 ```mermaid
 flowchart TD
-    L7["Layer 7 — Application<br/><i>APIs, web apps, email</i>"]
-    L6["Layer 6 — Presentation<br/><i>TLS/SSL, encoding, compression</i>"]
-    L5["Layer 5 — Session<br/><i>Session setup & teardown</i>"]
-    L4["Layer 4 — Transport<br/><i>TCP / UDP, ports</i>"]
-    L3["Layer 3 — Network<br/><i>IP addressing, routing</i>"]
-    L2["Layer 2 — Data Link<br/><i>MAC addresses, Ethernet, switches</i>"]
-    L1["Layer 1 — Physical<br/><i>Cables, NICs, VM hosts</i>"]
+    L7["Layer 7 — Application<br/>APIs, web apps, email"]
+    L6["Layer 6 — Presentation<br/>TLS/SSL, encoding, compression"]
+    L5["Layer 5 — Session<br/>Session setup and teardown"]
+    L4["Layer 4 — Transport<br/>TCP / UDP, ports"]
+    L3["Layer 3 — Network<br/>IP addressing, routing"]
+    L2["Layer 2 — Data Link<br/>MAC addresses, Ethernet, switches"]
+    L1["Layer 1 — Physical<br/>Cables, NICs, VM hosts"]
 
     L7 --> L6 --> L5 --> L4 --> L3 --> L2 --> L1
-    L1 -.->|"data returns upward"| L7
+    L1 -.->|data returns upward| L7
 
-    style L7 fill:#4f46e5,color:#fff
-    style L6 fill:#6366f1,color:#fff
-    style L5 fill:#818cf8,color:#fff
-    style L4 fill:#0ea5e9,color:#fff
-    style L3 fill:#10b981,color:#fff
-    style L2 fill:#f59e0b,color:#fff
-    style L1 fill:#ef4444,color:#fff
+    classDef app fill:#4f46e5,color:#fff,stroke:#333,stroke-width:1px;
+    classDef pres fill:#6366f1,color:#fff,stroke:#333,stroke-width:1px;
+    classDef sess fill:#818cf8,color:#fff,stroke:#333,stroke-width:1px;
+    classDef trans fill:#0ea5e9,color:#fff,stroke:#333,stroke-width:1px;
+    classDef net fill:#10b981,color:#fff,stroke:#333,stroke-width:1px;
+    classDef link fill:#f59e0b,color:#111,stroke:#333,stroke-width:1px;
+    classDef phys fill:#ef4444,color:#fff,stroke:#333,stroke-width:1px;
+
+    class L7 app
+    class L6 pres
+    class L5 sess
+    class L4 trans
+    class L3 net
+    class L2 link
+    class L1 phys
 ```
 
-> 💡 **Troubleshooting tip:** Work from the bottom up. A dead cable or downed VM (Layer 1) will masquerade as a broken app (Layer 7) if you don't rule out the lower layers first.
+> **Troubleshooting tip:** Work from the bottom up. A dead cable or downed VM (Layer 1) will masquerade as a broken app (Layer 7) if you don't rule out the lower layers first.
 
 ---
 
-## 🔍 Layer-by-Layer Breakdown
+##  Layer-by-Layer Breakdown
 
 ### Layer 1 — Physical
-The raw hardware layer: cables, switches, routers, NICs, and — in cloud environments — the underlying VM or bare-metal host. If power is out or a link is down, everything above it fails too. Always the first thing to rule out.
+The main hardware layer: cables, switches, routers, NICs, and — in cloud environments — the underlying VM or bare-metal host. If power is out or a link is down, everything above it fails too. Always the first thing to rule out.
 
 ### Layer 2 — Data Link
-Governs communication between devices sharing the same local network segment. This is where MAC addresses, Ethernet framing, and switch behavior (VLANs, ARP tables) live.
+Governs communication between devices sharing the same local network segment. This is where MAC addresses, Ethernet framing, and switch behaviour (VLANs, ARP tables) live.
 
 ### Layer 3 — Network
 Handles moving packets *between* different networks. IP addressing, subnetting, routing tables, and network-level firewalls all operate here — this is the layer most cloud VPC/subnet design decisions map to.
@@ -76,7 +84,7 @@ Handles moving packets *between* different networks. IP addressing, subnetting, 
 Decides *how* data gets delivered: reliably and ordered via **TCP**, or fast and best-effort via **UDP**. Ports, sessions, and connection integrity are managed here — critical for understanding load balancers and connection timeouts.
 
 ### Layer 5 — Session
-Manages the lifecycle of a connection: opening it, keeping it alive, and closing it cleanly. Less visible day-to-day, but relevant when debugging dropped or hanging connections.
+Manages the life cycle of a connection: opening it, keeping it alive, and closing it cleanly. Less visible day-to-day, but relevant when debugging dropped or hanging connections.
 
 ### Layer 6 — Presentation
 Translates data into a form applications can use. This includes TLS/SSL encryption, character encoding, and compression — the layer most often responsible for "certificate" and "handshake" errors.
@@ -99,7 +107,7 @@ The layer end users and developers interact with directly: web apps, REST/GraphQ
 
 ---
 
-## 💡 Why Networking Matters for DevOps
+## Why Networking Matters in DevOps
 
 Networking is the connective tissue underneath every deployment, cloud migration, and system integration. A solid grasp of it means:
 
@@ -110,5 +118,5 @@ Networking is the connective tissue underneath every deployment, cloud migration
 
 ---
 
-*This repo is a living document — updated as I work through new labs and topics.*
+*This repo is a living decontamination — updated as i work through different concepts.*
 
