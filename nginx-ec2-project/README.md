@@ -4,9 +4,9 @@
 
 For this project, I set up a web server using an AWS EC2 instance and NGINX.
 
-I also configured a custom domain — **mustafawebsite.co.uk** (purchased for 2 years at £8.03) — using Cloudflare DNS, and created an A record pointing my domain to the public IPv4 address of my EC2 instance.
+I also configured a custom domain — mustafawebsite.co.uk (purchased for 2 years at £8.03) using Cloudflare DNS, and created an A record pointing my domain to the public IPv4 address of my EC2 instance.
 
-The purpose of this project was to understand how DNS, IP addresses, ports, security groups, EC2, and web servers all work together — connecting the networking fundamentals I've been learning to a real, live deployment.
+The purpose of this project was to understand how DNS, IP addresses, ports, security groups, EC2, and web servers all work together . Connecting the networking fundamentals I've been learning to a real, live deployment.
 
 ## 2. What I Built
 
@@ -58,8 +58,8 @@ The main components I used were:
 ## Step 1 — Buy a Domain on Cloudflare
 
 1. Went to the [Cloudflare Registrar](https://www.cloudflare.com/products/registrar/)
-2. Searched for a domain and purchased **mustafawebsite.co.uk** for **2 years at £8.03**
-3. Cloudflare automatically manages DNS for the domain once purchased — no extra setup needed at this stage
+2. Searched for a domain and purchased mustafawebsite.co.uk for 2 years at £8.03
+3. Cloudflare automatically manages DNS for the domain once purchased 
 
 <img width="1777" height="721" alt="image" src="https://github.com/user-attachments/assets/4a62d664-f611-4ecc-a701-f6262b4382a0" />
 
@@ -67,7 +67,7 @@ The main components I used were:
 
 ## Step 2 — Launch an EC2 Instance
 
-Opened the **AWS EC2 console** → searched "EC2" in the AWS search bar → **Launch Instance**.
+Opened the AWS EC2 console → searched "EC2" in the AWS search bar → Launch Instance.
 
 **Basic settings used:**
 | Setting | Value |
@@ -95,7 +95,7 @@ Then went to the instance → **Instance Summary** → copied the **Public IPv4 
 
 ## Step 3 — Connect to the EC2 Instance via SSH
 
-Since I was working from **WSL**, the `.pem` file downloaded to my Windows filesystem first, so I had to move it into Linux before use:
+Since I was working from **WSL**, the `.pem` file downloaded to my Windows filesystem first, so I had to move it into Linux before use :
 
 ```bash
 mkdir -p ~/.ssh
@@ -122,7 +122,7 @@ sudo systemctl enable nginx
 sudo systemctl status nginx   # confirmed "active (running)"
 ```
 
-**Test:** opened `http://13.42.76.65` in a browser — the default NGINX welcome page loaded successfully.
+**Test:** opened `http://13.42.76.65` in a browser then the default NGINX welcome page loaded successfully.
 
 <img width="1181" height="521" alt="image" src="https://github.com/user-attachments/assets/0af2e66b-70b4-411d-9960-9db9c51e031d" />
 
@@ -132,7 +132,7 @@ sudo systemctl status nginx   # confirmed "active (running)"
 
 ## Step 5 — Point the Domain to the EC2 IP (Cloudflare)
 
-1. Cloudflare dashboard → my domain → **DNS** → **Add record**
+1. Cloudflare dashboard → my domain → DNS → Add Record
 2. Configured:
 
 | Field | Value |
