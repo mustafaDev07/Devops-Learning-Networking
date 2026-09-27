@@ -82,12 +82,15 @@ Opened the **AWS EC2 console** → searched "EC2" in the AWS search bar → **La
 | Instance type | `t3.micro` (Free Tier eligible) |
 | Key pair | Created new — `nginx-ec2-key.pem` (downloaded and kept safe) |
 
+<img width="1312" height="853" alt="image" src="https://github.com/user-attachments/assets/4ed42d7f-2c65-494c-b346-5144467ca98c" />
+
 **Security group — inbound rules:**
 | Type | Port | Source |
 |---|---|---|
 | SSH | 22 | My IP |
 | HTTP | 80 | 0.0.0.0/0 |
 | HTTPS | 443 | 0.0.0.0/0 |
+<img width="1025" height="759" alt="image" src="https://github.com/user-attachments/assets/435f2c1f-d22e-4687-8d17-baefcd76dd7a" />
 
 Clicked **Launch Instance** and waited for the state to show **Running**.
 
