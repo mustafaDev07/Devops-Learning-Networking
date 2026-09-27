@@ -166,7 +166,8 @@ Visited `http://mustafawebsite.co.uk` in the browser the NGINX welcome page load
 ##  What I Accomplished
 
 NGINX is live on EC2 and successfully mapped to my custom domain.
-<img width="3439" height="1382" alt="image" src="https://github.com/user-attachments/assets/d87ae0bc-c5f0-422b-960e-78334c30e03a" />
+<img width="1713" height="878" alt="image" src="https://github.com/user-attachments/assets/cc57eb18-a946-49a3-8007-1ef1def8edbc" />
+
 
 
 
