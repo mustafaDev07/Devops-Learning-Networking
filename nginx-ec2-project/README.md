@@ -20,13 +20,13 @@ The final setup looks like this:
                     ▼
       ┌─────────────────────────┐
       │      Cloudflare DNS      │
-      │  A record → 13.42.76.65  │
+      │  A record → 35.179.158.53 │
       └────────────┬─────────────┘
                     │  resolves to
                     ▼
       ┌─────────────────────────┐
       │    AWS EC2 Instance      │
-      │  Public IP: 13.42.76.65  │
+      │  Public IP: 35.179.158.53 │
       │  Security Group: 80/443  │
       └────────────┬─────────────┘
                     │  HTTP :80
@@ -106,7 +106,7 @@ chmod 400 ~/.ssh/nginx-ec2-key.pem
 Then connected:
 
 ```bash
-ssh -i ~/.ssh/nginx-ec2-key.pem ec2-user@13.42.76.65
+ssh -i ~/.ssh/nginx-ec2-key.pem ec2-user@35.179.158.53
 ```
 
 
@@ -122,7 +122,7 @@ sudo systemctl enable nginx
 sudo systemctl status nginx   # confirmed "active (running)"
 ```
 
-opened `http://13.42.76.65` in a browser then the default NGINX welcome page loaded successfully.
+opened `http://35.179.158.53` in a browser then the default NGINX welcome page loaded successfully.
 
 <img width="1181" height="521" alt="image" src="https://github.com/user-attachments/assets/0af2e66b-70b4-411d-9960-9db9c51e031d" />
 
