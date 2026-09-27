@@ -87,15 +87,15 @@ Opened the AWS EC2 console → searched "EC2" in the AWS search bar → Launch I
 | HTTPS | 443 | 0.0.0.0/0 |
 <img width="1025" height="759" alt="image" src="https://github.com/user-attachments/assets/435f2c1f-d22e-4687-8d17-baefcd76dd7a" />
 
-Clicked **Launch Instance** and waited for the state to show **Running**.
+Clicked **Launch Instance** and waited for the state to show Running.
 
 
-Then went to the instance → **Instance Summary** → copied the **Public IPv4 address** for later use.
+Then went to the instance → Instance Summary → copied the Public IPv4 address for later use.
 
 
 ## Step 3 — Connect to the EC2 Instance via SSH
 
-Since I was working from **WSL**, the `.pem` file downloaded to my Windows filesystem first, so I had to move it into Linux before use :
+Since I was working from WSL, the `.pem` file downloaded to my Windows filesystem first, so I had to move it into Linux before use :
 
 ```bash
 mkdir -p ~/.ssh
@@ -122,7 +122,7 @@ sudo systemctl enable nginx
 sudo systemctl status nginx   # confirmed "active (running)"
 ```
 
-**Test:** opened `http://13.42.76.65` in a browser then the default NGINX welcome page loaded successfully.
+opened `http://13.42.76.65` in a browser then the default NGINX welcome page loaded successfully.
 
 <img width="1181" height="521" alt="image" src="https://github.com/user-attachments/assets/0af2e66b-70b4-411d-9960-9db9c51e031d" />
 
@@ -141,7 +141,7 @@ sudo systemctl status nginx   # confirmed "active (running)"
 | Name | `@` (root domain) |
 | IPv4 address | `13.42.76.65` |
 | TTL | Auto |
-| Proxy status | DNS only (grey cloud) — for initial testing |
+| Proxy status | DNS only (grey cloud) for initial testing |
 
 3. Saved the record.
 
@@ -159,7 +159,7 @@ dig +short mustafawebsite.co.uk
 
 Both returned the EC2 public IP as expected.
 
-Visited `http://mustafawebsite.co.uk` in the browser — the NGINX welcome page loaded correctly, confirming the domain was correctly routed to the instance.
+Visited `http://mustafawebsite.co.uk` in the browser the NGINX welcome page loaded correctly, confirming the domain was correctly routed to the instance.
 
 
 
@@ -172,7 +172,7 @@ NGINX is live on EC2 and successfully mapped to my custom domain.
 
 ##  Replaced the Default Page with a Custom One
 
-**Goal:** swap NGINX's default landing page for a personal one.
+Swap NGINX's default landing page for a personal one.
 
 ```bash
 cd /usr/share/nginx/html
@@ -192,10 +192,10 @@ Visiting my domain now shows a custom landing page introducing myself and the te
 
 ## What I Used
 
-- **AWS EC2** — Amazon Linux 2023, t3.micro
-- **NGINX** — web server
-- **Cloudflare** — domain registration + DNS
-- **WSL (Ubuntu on Windows)** — local dev environment
+- **AWS EC2** Amazon Linux 2023, t3.micro
+- **NGINX** web server
+- **Cloudflare** domain registration + DNS
+- **WSL (Ubuntu on Windows)** local dev environment
 
 
 
