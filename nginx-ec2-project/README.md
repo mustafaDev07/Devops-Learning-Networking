@@ -105,7 +105,7 @@ Since I was working from **WSL**, the `.pem` file downloaded to my Windows files
 
 ```bash
 mkdir -p ~/.ssh
-cp /mnt/c/Users/<MyWindowsUsername>/Downloads/nginx-ec2-key.pem ~/.ssh/
+cp /mnt/c/Users/mustafalinux/Downloads/nginx-ec2-key.pem ~/.ssh/
 chmod 400 ~/.ssh/nginx-ec2-key.pem
 ```
 
