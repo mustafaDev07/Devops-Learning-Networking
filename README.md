@@ -37,32 +37,16 @@ Every request your users make — a page load, an API call, a database query —
 
 ```mermaid
 flowchart TD
-    L7["Layer 7 — Application<br/>APIs, web apps, email"]
-    L6["Layer 6 — Presentation<br/>TLS/SSL, encoding, compression"]
-    L5["Layer 5 — Session<br/>Session setup and teardown"]
-    L4["Layer 4 — Transport<br/>TCP / UDP, ports"]
-    L3["Layer 3 — Network<br/>IP addressing, routing"]
-    L2["Layer 2 — Data Link<br/>MAC addresses, Ethernet, switches"]
-    L1["Layer 1 — Physical<br/>Cables, NICs, VM hosts"]
+    L7[Layer 7 - Application]
+    L6[Layer 6 - Presentation]
+    L5[Layer 5 - Session]
+    L4[Layer 4 - Transport]
+    L3[Layer 3 - Network]
+    L2[Layer 2 - Data Link]
+    L1[Layer 1 - Physical]
 
     L7 --> L6 --> L5 --> L4 --> L3 --> L2 --> L1
-    L1 -.->|data returns upward| L7
-
-    classDef app fill:#4f46e5,color:#fff,stroke:#333,stroke-width:1px;
-    classDef pres fill:#6366f1,color:#fff,stroke:#333,stroke-width:1px;
-    classDef sess fill:#818cf8,color:#fff,stroke:#333,stroke-width:1px;
-    classDef trans fill:#0ea5e9,color:#fff,stroke:#333,stroke-width:1px;
-    classDef net fill:#10b981,color:#fff,stroke:#333,stroke-width:1px;
-    classDef link fill:#f59e0b,color:#111,stroke:#333,stroke-width:1px;
-    classDef phys fill:#ef4444,color:#fff,stroke:#333,stroke-width:1px;
-
-    class L7 app
-    class L6 pres
-    class L5 sess
-    class L4 trans
-    class L3 net
-    class L2 link
-    class L1 phys
+    L1 -.-> L7
 ```
 
 > **Troubleshooting tip:** Work from the bottom up. A dead cable or downed VM (Layer 1) will masquerade as a broken app (Layer 7) if you don't rule out the lower layers first.
