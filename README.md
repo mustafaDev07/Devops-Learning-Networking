@@ -35,7 +35,7 @@ The OSI (Open Systems Interconnection) model often gets dismissed as "textbook t
 
 Every request your users make — a page load, an API call, a database query — travels down through these layers on one end and back up on the other. When something breaks, knowing *which* layer to look at saves hours of guessing.
 
-```mermaid
+```
 flowchart TD
     L7[Layer 7 - Application]
     L6[Layer 6 - Presentation]
