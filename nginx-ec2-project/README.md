@@ -12,7 +12,7 @@ The purpose of this project was to understand how DNS, IP addresses, ports, secu
 
 The final setup looks like this:
 
-```
+
       ┌─────────────────────────┐
       │        Internet          │
       └────────────┬─────────────┘
@@ -39,7 +39,7 @@ The final setup looks like this:
       ┌─────────────────────────┐
       │    Custom Landing Page   │
       └─────────────────────────┘
-```
+
 
 The main components I used were:
 
@@ -92,7 +92,6 @@ Clicked **Launch Instance** and waited for the state to show **Running**.
 
 Then went to the instance → **Instance Summary** → copied the **Public IPv4 address** for later use.
 
----
 
 ## Step 3 — Connect to the EC2 Instance via SSH
 
@@ -110,7 +109,7 @@ Then connected:
 ssh -i ~/.ssh/nginx-ec2-key.pem ec2-user@13.42.76.65
 ```
 
----
+
 ## Step 4 — Install & Start NGINX on EC2
 
 Ran the following once connected:
@@ -129,7 +128,7 @@ sudo systemctl status nginx   # confirmed "active (running)"
 
 
 
----
+
 
 ## Step 5 — Point the Domain to the EC2 IP (Cloudflare)
 
@@ -189,7 +188,7 @@ sudo systemctl reload nginx
 
 Visiting my domain now shows a custom landing page introducing myself and the tech stack used (AWS EC2, NGINX, Cloudflare DNS) instead of the NGINX default.
 
----
+
 
 ## What I Used
 
@@ -198,6 +197,6 @@ Visiting my domain now shows a custom landing page introducing myself and the te
 - **Cloudflare** — domain registration + DNS
 - **WSL (Ubuntu on Windows)** — local dev environment
 
----
+
 
 
